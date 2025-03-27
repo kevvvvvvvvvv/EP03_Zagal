@@ -42,7 +42,6 @@ body {
     position:fixed;
     z-index:1000;
     width:100%;
-    
 }
 
 .navbar-brand .brand-text {
@@ -89,6 +88,7 @@ body {
     background-color: var(--gray-light);
     padding: 4rem 0;
     margin-bottom: 2rem;
+    padding-top: 120px;
 }
 
 .hero-banner h1 {
@@ -286,6 +286,7 @@ footer .list-unstyled li {
     .hero-banner {
         text-align: center;
         padding: 3rem 0;
+        padding-top: 120px !important;
     }
     
     .hero-banner .btn-lg {

@@ -21,19 +21,6 @@
                     <ul class="list-unstyled">
                         <li><a href="about.php" class="text-white"><?php echo $lang['about_us']; ?></a></li>
                         <li><a href="contact.php" class="text-white"><?php echo $lang['contact_us']; ?></a></li>
-                        <li><a href="terms.php" class="text-white"><?php echo $lang['terms_conditions']; ?></a></li>
-                        <li><a href="privacy.php" class="text-white"><?php echo $lang['privacy_policy']; ?></a></li>
-                    </ul>
-                </div>
-                
-                <!-- Customer Service -->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase"><?php echo $lang['customer_service']; ?></h5>
-                    <ul class="list-unstyled">
-                        <li><a href="faq.php" class="text-white"><?php echo $lang['faq']; ?></a></li>
-                        <li><a href="shipping.php" class="text-white"><?php echo $lang['shipping']; ?></a></li>
-                        <li><a href="returns.php" class="text-white"><?php echo $lang['returns']; ?></a></li>
-                        <li><a href="order-tracking.php" class="text-white"><?php echo $lang['order_tracking']; ?></a></li>
                     </ul>
                 </div>
                 
@@ -41,10 +28,8 @@
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5 class="text-uppercase"><?php echo $lang['contact_info']; ?></h5>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Market St, City</li>
                         <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
                         <li><i class="fas fa-envelope me-2"></i> info@jiks.com</li>
-                        <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM-9PM</li>
                     </ul>
                 </div>
             </div>
