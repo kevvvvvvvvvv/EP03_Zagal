@@ -32,7 +32,7 @@ $lang = array(
     'explore' => 'Explore',
     
     // Special Offers
-    'special_offers' => 'Special Offers',
+    'special_offers' => 'Special Offers From $10.00 USD',
     'sale' => 'SALE',
     'new' => 'NEW',
     'exclusive' => 'EXCLUSIVE',
@@ -66,6 +66,8 @@ $lang = array(
     'order_tracking' => 'Order Tracking',
     'contact_info' => 'Contact Info',
     'all_rights_reserved' => 'All rights reserved',
+    'date' => 'Mon-Sat: 9AM-9PM',
+    'directions' => '1234 Insurgentes Ave S, Roma Norte, Mexico City, CDMX 06700, Mexico',
     
     // Contact Page
     'send_us_message' => 'Send Us a Message',

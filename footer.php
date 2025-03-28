@@ -30,6 +30,8 @@
                     <ul class="list-unstyled">
                         <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
                         <li><i class="fas fa-envelope me-2"></i> info@jiks.com</li>
+                        <li><i class="fas fa-clock me-2"></i> <?php echo $lang['date']; ?></li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> <?php echo $lang['directions']; ?></li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +44,9 @@
     </footer>
 
     <!-- Scripts -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script> 
     <script src="js/main.js"></script>
+    <script src="https://cdn.userway.org/widget.js&quot; data-account="kjnnkEfZx0"></script>
 </body>
 </html>

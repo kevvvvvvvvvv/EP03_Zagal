@@ -32,7 +32,7 @@ $lang = array(
     'explore' => 'Explorar',
     
     // Special Offers
-    'special_offers' => 'Ofertas Especiales',
+    'special_offers' => 'Ofertas Especiales desde $41.130,00 COP',
     'sale' => 'OFERTA',
     'new' => 'NUEVO',
     'exclusive' => 'EXCLUSIVO',
@@ -66,6 +66,8 @@ $lang = array(
     'order_tracking' => 'Seguimiento de Pedidos',
     'contact_info' => 'Información de Contacto',
     'all_rights_reserved' => 'Todos los derechos reservados',
+    'date' => 'Lun-Sáb: 9:00-21:00',
+    'directions' => 'Av. Insurgentes Sur 1234, Col. Roma Norte, 06700, Ciudad de México, CDMX, México',
     
     // Contact Page
     'send_us_message' => 'Envíanos un Mensaje',

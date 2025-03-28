@@ -117,7 +117,7 @@
                                     </div>
                                     <div>
                                         <h6 class="mb-1"><?php echo $lang['address']; ?></h6>
-                                        <p class="mb-0">123 Market St, City, Country</p>
+                                        <p class="mb-0"><?php echo $lang['directions']; ?></p>
                                     </div>
                                 </li>
                                 <li class="d-flex mb-3">
@@ -144,7 +144,7 @@
                                     </div>
                                     <div>
                                         <h6 class="mb-1"><?php echo $lang['hours']; ?></h6>
-                                        <p class="mb-0">Mon-Sat: 9AM-9PM<br>Sunday: 10AM-6PM</p>
+                                        <p class="mb-0"><?php echo $lang['date']; ?></p>
                                     </div>
                                 </li>
                             </ul>
