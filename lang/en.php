@@ -33,7 +33,7 @@ $lang = array(
     'explore' => 'Explore',
     
     // Special Offers
-    'special_offers' => 'Special Offers From $10.00 USD',
+    'special_offers' => 'Special Offers From £10.00',
     'sale' => 'SALE',
     'new' => 'NEW',
     'exclusive' => 'EXCLUSIVE',

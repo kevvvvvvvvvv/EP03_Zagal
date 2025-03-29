@@ -44,7 +44,7 @@
     </footer>
 
     <!-- Scripts -->
-    
+    <script src="https://cdn.userway.org/widget.js" data-account="kjnqkEfZx0" data-size="large"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script> 
     <script src="js/main.js"></script>
     <script src="https://cdn.userway.org/widget.js&quot; data-account="kjnnkEfZx0"></script>

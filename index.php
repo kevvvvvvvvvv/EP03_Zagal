@@ -174,9 +174,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
                 <!-- Tabla de quejas -->
                 <div class="mt-5">
-                    <h4><?php echo $lang['recent_complaints']; ?></h4>
+                    <h4 id="complaints-table"><?php echo $lang['recent_complaints']; ?></h4>
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered border-dark"> <!-- mx-auto para centrar la tabla -->
+                        <table class="table table-striped" > 
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">#</th>
@@ -199,8 +199,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                     while($row = $result->fetch_assoc()) {
                                         echo "<tr>";
                                         echo "<th scope='row'>".$row['id']."</th>";
-                                        echo "<td>".htmlspecialchars($row['name'])."</td>";
-                                        echo "<td>".nl2br(htmlspecialchars($row['text']))."</td>";
+                                        echo "<td>".($row['name'])."</td>";
+                                        echo "<td>".($row['text'])."</td>";
                                         echo "</tr>";
                                     }
                                 } else {
@@ -216,9 +216,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         </div>
     </div>
 </section>
-
-
-
 <?php
     include 'footer.php';
 ?>

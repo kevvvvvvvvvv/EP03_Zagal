@@ -73,7 +73,7 @@ include_once 'lang/' . $_SESSION['lang'] . '.php';
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="index.php#complaints-table">
                             <i class="bi bi-chat-fill"></i> <?php echo $lang['complaints']; ?>
                         </a>
                     </li>
