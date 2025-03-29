@@ -21,6 +21,7 @@ $lang = array(
     'theme' => 'Tema',
     'light' => 'Claro',
     'dark' => 'Oscuro',
+    'complaints' => 'Quejas',
     
     // Hero Section
     'welcome_to' => 'Bienvenido a',
@@ -47,13 +48,20 @@ $lang = array(
     'join_now' => 'Únete Ahora',
     
     // Newsletter
-    'subscribe_newsletter' => 'Suscríbete a Nuestro Boletín',
+    'subscribe_newsletter' => 'Envíanos tu sugerencias',
     'newsletter_desc' => 'Recibe ofertas especiales y novedades directamente en tu correo electrónico.',
     'your_email' => 'Tu correo electrónico',
     'subscribe' => 'Suscribirse',
+    'your_name' => 'Tu nombre',
+    'your_suggestion' => 'Tu sugerencia',
+    'submit' => 'Enviar',
+    'name' => 'Nombre',
+    'complaint' => 'Sugerencia',
+    'recent_complaints' => 'Sugerencias',
+    'no_complaints' => 'No hay sugerencias',
     
     // Footer
-    'footer_company_desc' => 'JIK\'s Supermercado es tu destino de confianza para productos frescos y de alta calidad, con un servicio excepcional.',
+    'footer_company_desc' => 'JIK\'s Supermercado es tu destino de confianza para productos frescos y de alta calidad, con un servicio excepcional desde 01/02/2025.',
     'quick_links' => 'Enlaces Rápidos',
     'about_us' => 'Sobre Nosotros',
     'contact_us' => 'Contáctanos',

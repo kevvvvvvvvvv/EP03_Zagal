@@ -120,22 +120,104 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <h3><?php echo $lang['subscribe_newsletter']; ?></h3>
-                    <p class="mb-4"><?php echo $lang['newsletter_desc']; ?></p>
-                    <form action="" method="POST" class="newsletter-form">
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="<?php echo $lang['your_email']; ?>" aria-label="Email address" required>
-                            <button class="btn btn-primary" type="submit"><?php echo $lang['subscribe']; ?></button>
-                        </div>
-                    </form>
+<?php
+// Configuración de conexión a la base de datos (al inicio del archivo)
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'jiks');
+
+// Procesamiento del formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $name = $conn->real_escape_string($_POST['name']);
+    $complaint = $conn->real_escape_string($_POST['complaint']);
+
+    if(!empty($name) && !empty($complaint)) {
+        $sql = "SELECT MAX(id) as max_id FROM complaints";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+        $next_id = ($row['max_id'] ?? 0) + 1;
+
+        $sql = "INSERT INTO complaints (id, name, text) VALUES ('$next_id', '$name', '$complaint')";
+
+        if ($conn->query($sql)) {
+            echo '<script>window.location.href = "'.$_SERVER['PHP_SELF'].'";</script>';
+            exit();
+        }
+    }
+    $conn->close();
+}
+?>
+
+<!-- HTML -->
+<section class="newsletter py-5">
+    <div class="container">
+        <div class="row justify-content-center"> <!-- Contenedor para centrar -->
+            <div class="col-md-8 text-center"> <!-- Ancho medio y centrado -->
+                <!-- Formulario -->
+                <h3><?php echo $lang['subscribe_newsletter']; ?></h3>
+                <form action="" method="POST" class="newsletter-form">
+                    <div class="input-group mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="<?php echo $lang['your_name']; ?>" aria-label="Your name" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <textarea name="complaint" class="form-control" placeholder="<?php echo $lang['your_suggestion']; ?>" aria-label="Your complaint" required></textarea>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary"><?php echo $lang['submit']; ?></button>
+                </form>
+
+                <!-- Tabla de quejas -->
+                <div class="mt-5">
+                    <h4><?php echo $lang['recent_complaints']; ?></h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered border-dark"> <!-- mx-auto para centrar la tabla -->
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col"><?php echo $lang['name']; ?></th>
+                                    <th scope="col"><?php echo $lang['complaint']; ?></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+                                
+                                if ($conn->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                }
+
+                                $sql = "SELECT id, name, text FROM complaints ORDER BY id DESC LIMIT 10";
+                                $result = $conn->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<th scope='row'>".$row['id']."</th>";
+                                        echo "<td>".htmlspecialchars($row['name'])."</td>";
+                                        echo "<td>".nl2br(htmlspecialchars($row['text']))."</td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='3' class='text-center'>".$lang['no_complaints']."</td></tr>";
+                                }
+                                $conn->close();
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
 
 <?php
     include 'footer.php';
